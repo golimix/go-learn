@@ -3,7 +3,6 @@ package typing
 import (
 	"fmt"
 	"reflect"
-	"strconv"
 	"testing"
 )
 
@@ -95,7 +94,7 @@ func TestArray(t *testing.T) {
 	arr = [...]string{"hello", "cool", "limix"}
 	fmt.Printf("%s, 长度:%d, 容量:%d 类型:%s\n", arr, len(arr), cap(arr), reflect.TypeOf(arr).String())
 
-	// TODO 向数据添加一个元素
+	// TODO 向数据类型中添加一个元素
 
 }
 
@@ -147,40 +146,4 @@ func TestSlice(t *testing.T) {
 	}()
 	println(arr[0], arr[1], arr[2], arr[3])
 
-}
-
-type DemoStruct struct {
-	x, y int
-	u    float32
-	_    float32 // padding
-	A    *[]int
-	F    func()
-}
-
-func (u DemoStruct) String() string {
-	return strconv.FormatFloat(float64(u.x)+float64(u.y)+float64(u.u), 'f', 10, 64)
-}
-
-func TestStruct(t *testing.T) {
-	// 1. struct的定义
-	println(`
-		StructType    = "struct" "{" { FieldDecl ";" } "}" .
-		FieldDecl     = (IdentifierList Type | EmbeddedField) [ Tag ] .
-		EmbeddedField = [ "*" ] TypeName .
-		Tag           = string_lit .
-
-		IdentifierList = identifier { "," identifier } .
-	`)
-
-	// 2. struct 定义一个空结构体
-	type x struct{}
-	struct_empty := x{}
-	println("%d", &struct_empty)
-
-	limix := DemoStruct{
-		x: 0.0,
-		y: 1.0,
-		u: 3.1415926,
-	}
-	fmt.Printf("%s\n", limix.String())
 }
