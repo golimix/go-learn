@@ -113,6 +113,10 @@ func TestSlice(t *testing.T) {
 	arr := []string{"hello", "cool", "limix"}
 	fmt.Printf("%s, 长度:%d, 容量:%d 类型:%s\n", arr, len(arr), cap(arr), reflect.TypeOf(arr).String())
 
+	// 通过new构造一个切片
+	newarr := new([100]int)[0:50]
+	fmt.Printf("%d, 长度:%d, 容量:%d 类型:%s\n", newarr, len(newarr), cap(newarr), reflect.TypeOf(newarr).String())
+
 	// 通过make构造一个切片
 	arr1 := make([]int, 3)
 	fmt.Printf("%d, 长度:%d, 容量:%d 类型:%s\n", arr1, len(arr1), cap(arr1), reflect.TypeOf(arr1).String())
