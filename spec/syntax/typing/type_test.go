@@ -112,7 +112,7 @@ func changeStringPoint(email *string) string {
 }
 
 // 测试字符串参数传递
-func TestStringParams(t *testing.T) {
+func TestTypingStringParams(t *testing.T) {
 	fmt.Println("type string 的值是immutable")
 	user := "init"
 	user1 := changeString(user)

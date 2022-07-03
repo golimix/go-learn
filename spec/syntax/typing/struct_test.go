@@ -76,7 +76,7 @@ func (user *User) ChangeEmailPoint() User {
 	return *user
 }
 
-// 结构体传值,结构体传指针的差异
+// 值传递,引用传递,结构体传值,结构体传指针的差异
 func TestTypingStructParams(t *testing.T) {
 	user := User{email: "coollimix@gmail.com"}
 	println(&user)
