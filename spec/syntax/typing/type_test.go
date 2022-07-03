@@ -3,6 +3,7 @@ package typing
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 	"testing"
 )
 
@@ -10,7 +11,9 @@ func TestTypingSpec(t *testing.T) {
 	fmt.Println(`
 		// 1. 类型的具体含义
 		类型确定一组值以及特定于这些值的操作和方法,内部确定了类型的字节长度,类型的结构
-
+		类型是一组相似值的集合
+		在这一组值上我们可以进行相同的操作
+		
 		// 2. 类型的逻辑部分
 		name, args, literal
 
@@ -58,6 +61,9 @@ func TestTypingInteger(t *testing.T) {
 	println(d)
 	// d = 0x1p64
 	fmt.Printf("%s超出%s范围\n", "a = 0x1p64\t", "uint64")
+
+	// 检测int类型的字节数
+	fmt.Println("Int的大小=%i", strconv.IntSize)
 }
 
 func TestTypingFloat(t *testing.T) {
