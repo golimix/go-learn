@@ -6,14 +6,22 @@ import (
 	"testing"
 )
 
-func TestTyping(t *testing.T) {
+func TestTypingSpec(t *testing.T) {
 	fmt.Println(`
-	Type      = TypeName [ TypeArgs ] | TypeLit | "(" Type ")" .
-	TypeName  = identifier | QualifiedIdent .
-	TypeArgs  = "[" TypeList [ "," ] "]" .
-	TypeList  = Type { "," Type } .
-	TypeLit   = ArrayType | StructType | PointerType | FunctionType | InterfaceType |
-			SliceType | MapType | ChannelType .`)
+		// 1. 类型的具体含义
+		类型确定一组值以及特定于这些值的操作和方法,内部确定了类型的字节长度,类型的结构
+
+		// 2. 类型的逻辑部分
+		name, args, literal
+
+		// 3. 类型的基础规范
+		Type      = TypeName [ TypeArgs ] | TypeLit | "(" Type ")" .
+		TypeName  = identifier | QualifiedIdent .
+		TypeArgs  = "[" TypeList [ "," ] "]" .
+		TypeList  = Type { "," Type } .
+		TypeLit   = ArrayType | StructType | PointerType | FunctionType | InterfaceType |
+				SliceType | MapType | ChannelType .		
+	`)
 }
 
 func TestTypingBool(t *testing.T) {
@@ -21,6 +29,7 @@ func TestTypingBool(t *testing.T) {
 	println(false)
 }
 
+// 整型的字节长度决定了其所能存储的数据范围
 func TestTypingInteger(t *testing.T) {
 	// 8位无符号整型
 	var a uint8
@@ -82,18 +91,4 @@ func TestTypingString(t *testing.T) {
 	a := "abcde"
 	fmt.Printf("%c\t%c\t%c\t%c\t%c\t\n", a[0], a[1], a[2], a[3], a[4])
 	fmt.Printf("%c\t%c\t%c\t%c\t%c\t%c\n", a[0], a[1], a[2], a[3], a[4], a[5])
-}
-
-func TestTypingArray(t *testing.T) {
-	println(`
-		ArrayType   = "[" ArrayLength "]" ElementType .
-		ArrayLength = Expression .
-		ElementType = Type .`)
-	arr := [3]string{"hello", "cool", "limix"}
-	fmt.Printf("%s, 长度:%d, 容量:%d 类型:%s\n", arr, len(arr), cap(arr), reflect.TypeOf(arr).String())
-	arr = [...]string{"hello", "cool", "limix"}
-	fmt.Printf("%s, 长度:%d, 容量:%d 类型:%s\n", arr, len(arr), cap(arr), reflect.TypeOf(arr).String())
-
-	// TODO 向数据类型中添加一个元素
-
 }
