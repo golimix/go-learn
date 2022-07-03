@@ -2,7 +2,7 @@ package typing
 
 import "testing"
 
-func TestFunctionSpec(t *testing.T) {
+func TestTypingFunctionSpec(t *testing.T) {
 	println("the spec 定义如下")
 	println(`
 		FunctionType   = "func" Signature .

@@ -10,7 +10,7 @@ type emptyStruct struct{}
 
 // 所有的内存大小为空,都指向了同一个地址 uintptr, 全局变量,占8个字节
 // 涉及到所有内存size为0的内存分配,那么就用同一个地址 &zerobase
-func TestStructEmpty(t *testing.T) {
+func TestTypingStructEmpty(t *testing.T) {
 	a := struct{}{}
 	b := struct{}{}
 	c := emptyStruct{}
@@ -36,7 +36,7 @@ func (u DemoStruct) String() string {
 	return strconv.FormatFloat(float64(u.x)+float64(u.y)+float64(u.u), 'f', 10, 64)
 }
 
-func TestStructDefine(t *testing.T) {
+func TestTypingStructDefine(t *testing.T) {
 	// 1. struct的定义
 	println(`
 		StructType    = "struct" "{" { FieldDecl ";" } "}" .

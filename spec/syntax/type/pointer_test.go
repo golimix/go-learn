@@ -2,7 +2,7 @@ package typing
 
 import "testing"
 
-func TestPointerSpec(t *testing.T) {
+func TestTypingPointerSpec(t *testing.T) {
 	println(`
 		PointerType = "*" BaseType .
 		BaseType    = Type .`)

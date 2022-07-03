@@ -16,12 +16,12 @@ func TestTyping(t *testing.T) {
 			SliceType | MapType | ChannelType .`)
 }
 
-func TestBool(t *testing.T) {
+func TestTypingBool(t *testing.T) {
 	println(true)
 	println(false)
 }
 
-func TestInteger(t *testing.T) {
+func TestTypingInteger(t *testing.T) {
 	// 8位无符号整型
 	var a uint8
 	println(a)
@@ -51,7 +51,7 @@ func TestInteger(t *testing.T) {
 	fmt.Printf("%s超出%s范围\n", "a = 0x1p64\t", "uint64")
 }
 
-func TestFloat(t *testing.T) {
+func TestTypingFloat(t *testing.T) {
 	var a float32
 	print(a)
 	a = 1.0
@@ -72,7 +72,7 @@ func TestFloat(t *testing.T) {
 	println(reflect.TypeOf(c).String())
 }
 
-func TestString(t *testing.T) {
+func TestTypingString(t *testing.T) {
 	var err interface{}
 	defer func() {
 		if err = recover(); err != nil {
@@ -84,7 +84,7 @@ func TestString(t *testing.T) {
 	fmt.Printf("%c\t%c\t%c\t%c\t%c\t%c\n", a[0], a[1], a[2], a[3], a[4], a[5])
 }
 
-func TestArray(t *testing.T) {
+func TestTypingArray(t *testing.T) {
 	println(`
 		ArrayType   = "[" ArrayLength "]" ElementType .
 		ArrayLength = Expression .
@@ -106,7 +106,7 @@ func TestArray(t *testing.T) {
  * 结论: 切片新增元素可以通过 `append()` 本质是追加元素而不是扩展容量
  * 结论: 切片新增元素可以通过 `copy()`
  */
-func TestSlice(t *testing.T) {
+func TestTypingSlice(t *testing.T) {
 	println(`
 		SliceType = "[" "]" ElementType .
 	`)
