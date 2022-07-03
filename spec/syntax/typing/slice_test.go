@@ -6,6 +6,19 @@ import (
 	"testing"
 )
 
+func TestTypingSliceStruct(t *testing.T) {
+	println(`
+		type slice struct {
+			array unsafe.Pointer  //指针
+			len   int             //长度
+			cap   int             //容量
+		}
+	`)
+	demo := []int{1, 2, 3}
+	println(len(demo), cap(demo), demo[0], demo[1], demo[2])
+	println(&demo)
+}
+
 /**
  * 结论: 切片具有len和cap两个属性
  * 结论: 切片的len和cap可以通过内置函数len()和cap()获取
