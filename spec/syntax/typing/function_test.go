@@ -25,3 +25,11 @@ func TestTypingFunctionSpec(t *testing.T) {
 		func(n int) func(p *T)
 	`)
 }
+
+func TestTypingFunctionsPredeclared(t *testing.T) {
+	println(`
+		Functions:
+		append cap close complex copy delete imag len
+		make new panic print println real recover	
+	`)
+}
