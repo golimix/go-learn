@@ -59,3 +59,42 @@ func TestTypingStructDefine(t *testing.T) {
 	}
 	fmt.Printf("%s\n", limix.String())
 }
+
+type User struct {
+	email string
+}
+
+// 传递的是值,复制整个结构体,返回一个新指针
+func (user User) ChangeEmail() User {
+	user.email = "value@gmail.com"
+	return user
+}
+
+// 传递的是值,复制一个指针,返回一个指针引用
+func (user *User) ChangeEmailPoint() User {
+	user.email = "point@gmail.com"
+	return *user
+}
+
+// 结构体传值,结构体传指针的差异
+func TestTypingStructParams(t *testing.T) {
+	user := User{email: "coollimix@gmail.com"}
+	println(&user)
+	user1 := user.ChangeEmail()
+	fmt.Printf("%p,%p\n", &user, &user1)
+	println(user.email)
+	user2 := user.ChangeEmailPoint()
+	fmt.Printf("%p,%p,%p\n", &user, &user1, &user2)
+	if user == user1 {
+		panic("some wrong")
+	} else {
+		println("传递的是值,复制整个结构体,返回一个新指针")
+		println("user != user1")
+	}
+	if user == user2 {
+		println("传递的是值,复制一个指针,返回一个指针引用")
+		println("user == user2")
+	} else {
+		println("user != user2")
+	}
+}
