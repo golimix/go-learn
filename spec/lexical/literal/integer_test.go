@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestInteger(t *testing.T) {
+func TestLiteralInteger(t *testing.T) {
 	println(`
 		整型字面量,十进制、二进制、八进制、十六进制
 		int_lit        = decimal_lit | binary_lit | octal_lit | hex_lit .
