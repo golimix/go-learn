@@ -6,13 +6,14 @@ import "testing"
  函数包: import errors
  函数调用: 不一定会成功,必定存在发生错误场景
  错误表征:
+    Java: Exception
     是否发生: 类型 error (空:成功, 非空:失败)
     详细信息: fmt.Println(err) 或者 fmt.Println("%v", err)
  错误返回: 多返回值
  错误案例: 查询缓存可能会失败
  错误处理:
-    传统: 处理控制流 catch
-    Go语言: if return 正常控制流
+    传统: 处理控制流 throw catch
+    Go语言: 正常控制流 panic recover
  处理策略:
     方式一、直接返回错误 -> 子例程错误变为主调例程的错误
     resp, err := http.Get(url)

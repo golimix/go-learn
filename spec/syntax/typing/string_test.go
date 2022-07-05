@@ -43,10 +43,34 @@ func TestTypingStringParams(t *testing.T) {
 	println(&user3[0], "\n")
 }
 
+// 字符串比较
+// 推荐使用 strings.EqualFold方法进行字符串比较
 func TestTypingStringCompare(t *testing.T) {
-	a := "A"
-	b := "a"
-	if strings.Compare(strings.ToLower(a), strings.ToLower(b)) == 0 {
-		println("a = b ignore caption")
+	// 1. 区分大小写-直接使用 ==
+	srcString := "This a string"
+	destString := "this a string"
+	if srcString == destString {
+		fmt.Println("Equals")
+	} else {
+		fmt.Println("Not Equals")
+	}
+
+	// 2. 借助toLower已废弃
+	// if strings.ToLower(srcString) == strings.ToLower(destString) {
+	// 	fmt.Println("Equals")
+	// } else {
+	// 	fmt.Println("Not Equals")
+	// }
+
+	if strings.Compare(strings.ToLower(srcString), strings.ToLower(destString)) == 0 {
+		fmt.Println("Equals")
+	} else {
+		fmt.Println("Not Equals")
+	}
+
+	if strings.EqualFold(srcString, destString) == true {
+		fmt.Println("Equals")
+	} else {
+		fmt.Println("Not Equals")
 	}
 }
