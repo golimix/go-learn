@@ -60,6 +60,12 @@ Project starts 2022-07-01
 [Go反射] starts 2022-07-03
 [Go反射] is 0% completed
 [Go反射] lasts 5 day
+[Go依赖注入] starts 2022-07-05
+[Go依赖注入] is 10% completed
+[Go依赖注入] lasts 5 day
 
 @endgantt
 ```
+
+### Go依赖注入
+发现我要使用awx控制端访问远端服务,为了避免代码重复,一种使用单例模式,一种使用依赖注入框架,wire

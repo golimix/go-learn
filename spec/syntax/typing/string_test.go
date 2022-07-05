@@ -2,6 +2,7 @@ package typing
 
 import (
 	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -40,4 +41,12 @@ func TestTypingStringParams(t *testing.T) {
 
 	user3 := ([]byte)("init")
 	println(&user3[0], "\n")
+}
+
+func TestTypingStringCompare(t *testing.T) {
+	a := "A"
+	b := "a"
+	if strings.Compare(strings.ToLower(a), strings.ToLower(b)) == 0 {
+		println("a = b ignore caption")
+	}
 }
