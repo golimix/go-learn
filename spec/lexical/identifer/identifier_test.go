@@ -34,3 +34,22 @@ func TestIdentifierPredeclared(t *testing.T) {
 			make new panic print println real recover	
 	`)
 }
+
+func TestIdentifierNil(t *testing.T) {
+	println(`
+		各种类型在没有赋值之前都会是一个0值, 在builtin.go中是预定义好的一个变量
+			type Type int
+			var nil Type
+
+		bool      -> false                              
+		numbers -> 0                                 
+		string    -> ""      
+		
+		pointers -> nil
+		slices -> nil
+		maps -> nil
+		channels -> nil
+		functions -> nil
+		interfaces -> nil
+	`)
+}
