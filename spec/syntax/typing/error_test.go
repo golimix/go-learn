@@ -3,6 +3,7 @@ package typing
 import "testing"
 
 /* 函数调用 => 发生错误 => 错误表征 => 错误返回 => 错误处理
+ 函数包: import errors
  函数调用: 不一定会成功,必定存在发生错误场景
  错误表征:
     是否发生: 类型 error (空:成功, 非空:失败)
