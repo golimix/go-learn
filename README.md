@@ -9,6 +9,10 @@ cd ../tutorial
 go mod init github.com/24king/go-learn/tutorial
 cd ../misc
 go mod init github.com/24king/go-learn/misc
+cd ../stdlib
+go mod init github.com/24king/go-learn/stdlib
+cd ../tool
+go mod init github.com/24king/go-learn/tool
 ```
 # 工作空间初始化
 ```
@@ -16,6 +20,8 @@ go work init ./leetcode
 go work init ./spec
 go work init ./tutorial
 go work init ./misc
+go work init ./stdlib
+go work init ./tool
 ```
 
 # 规范 
