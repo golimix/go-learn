@@ -6,4 +6,5 @@ use (
 	./spec
 	./tutorial
 	./tool
+	./stdlib
 )
