@@ -2,6 +2,7 @@ package typing
 
 import "testing"
 
+// INFO 注意区分函数类型和函数声明,这里指的是一个类型而不是声明
 func TestTypingFunctionSpec(t *testing.T) {
 	println("the spec 定义如下")
 	println(`
