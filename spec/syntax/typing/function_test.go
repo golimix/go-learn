@@ -33,3 +33,17 @@ func TestTypingFunctionsPredeclared(t *testing.T) {
 		make new panic print println real recover	
 	`)
 }
+
+// 测试变长函数-函数的参数长度可变
+func TestTypingFunctionVariableParams(t *testing.T) {
+	toPrint := []string{"a", "b", "c"}
+	FunctionVariableParams(toPrint...)
+}
+
+func FunctionVariableParams(toPrints ...string) {
+	println(toPrints)
+	for _, v := range toPrints {
+		print(v + "\t")
+	}
+	println()
+}
