@@ -1,3 +1,4 @@
+// 描述Go的类型系统
 package typing
 
 import "testing"
@@ -35,7 +36,13 @@ func TestTypingFunctionsPredeclared(t *testing.T) {
 	`)
 }
 
-// 测试变长函数-函数的参数长度可变
+/*
+@title 测试变长函数
+@description 函数的参数长度可变 1. 变长函数的定义 2. 变长函数的调用
+@auth limix
+@param
+@return
+*/
 func TestTypingFunctionVariableParams(t *testing.T) {
 	toPrint := []string{"a", "b", "c"}
 	FunctionVariableParams(toPrint...)

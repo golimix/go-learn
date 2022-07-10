@@ -13,6 +13,8 @@ cd ../stdlib
 go mod init github.com/24king/go-learn/stdlib
 cd ../tool
 go mod init github.com/24king/go-learn/tool
+cd ../framework
+go mod init github.com/24king/go-learn/framework
 ```
 # 工作空间初始化
 ```
@@ -22,6 +24,7 @@ go work init ./tutorial
 go work init ./misc
 go work init ./stdlib
 go work init ./tool
+go work init ./framework
 ```
 
 # 规范 
@@ -69,6 +72,8 @@ Project starts 2022-07-01
 [Go依赖注入] starts 2022-07-05
 [Go依赖注入] is 10% completed
 [Go依赖注入] lasts 5 day
+[Gin-Context] starts 2022-07-07
+[Gin-Context] is 0% completed
 
 @endgantt
 ```

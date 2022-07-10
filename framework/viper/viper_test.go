@@ -27,6 +27,7 @@ func TestViper(t *testing.T) {
 	}
 	// 单个取值
 	name := v.Get("name").(string)
+	fmt.Println(v.Get("redis.host"))
 
 	// 映射到结构体
 	var s ServerConfig

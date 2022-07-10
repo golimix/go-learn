@@ -7,4 +7,5 @@ use (
 	./tutorial
 	./tool
 	./stdlib
+	./framework
 )
