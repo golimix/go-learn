@@ -64,6 +64,9 @@ func TestTypingInteger(t *testing.T) {
 
 	// 检测int类型的字节数
 	fmt.Println("Int的大小=%i", strconv.IntSize)
+
+	x := 30
+	println(reflect.TypeOf(x).String())
 }
 
 func TestTypingFloat(t *testing.T) {

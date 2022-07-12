@@ -1,11 +1,12 @@
 go 1.18
 
 use (
+	./framework
 	./leetcode
 	./misc
+	./pattern
 	./spec
-	./tutorial
-	./tool
 	./stdlib
-	./framework
+	./tool
+	./tutorial
 )

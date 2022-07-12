@@ -7,6 +7,7 @@ import (
 	"testing"
 )
 
+// 类型的基础类型
 func TestUnderlying(test *testing.T) {
 
 	type A string
@@ -27,23 +28,23 @@ func TestUnderlying(test *testing.T) {
 	var t T
 	var u U
 	fmt.Printf(`
-		a	%s	%s
-		b	%s	%s
-		m	%s	%s
-		n	%s	%s
-		p	%s	%s
-		s	%s	%s
-		t	%s	%s
-		u	%s	%s
+		a	%20s	%10s
+		b	%20s	%10s
+		m	%20s	%10s
+		n	%20s	%10s
+		p	%20s	%10s
+		s	%20s	%10s
+		t	%20s	%10s
+		u	%20s	%10s
 		`,
 		reflect.TypeOf(a).String(), reflect.TypeOf(a).Kind(),
 		reflect.TypeOf(b).String(), reflect.TypeOf(b).Kind(),
-		reflect.TypeOf(m).String()+"\t"+reflect.TypeOf(m).Elem().String(), reflect.TypeOf(m).Kind(),
-		reflect.TypeOf(n).String()+"\t"+reflect.TypeOf(n).Elem().String(), reflect.TypeOf(n).Kind(),
+		reflect.TypeOf(m).String(), reflect.TypeOf(m).Elem().String()+reflect.TypeOf(m).Kind().String(),
+		reflect.TypeOf(n).String(), reflect.TypeOf(n).Elem().String()+reflect.TypeOf(n).Kind().String(),
 		reflect.TypeOf(p).String(), reflect.TypeOf(p).Kind(),
 		reflect.TypeOf(s).String(), reflect.TypeOf(s).Kind(),
-		reflect.TypeOf(t).String(), reflect.TypeOf(t).Kind(),
-		reflect.TypeOf(u).String(), reflect.TypeOf(u).Kind(),
+		reflect.TypeOf(t).String(), reflect.TypeOf(t).Elem().String()+reflect.TypeOf(t).Kind().String(),
+		reflect.TypeOf(u).String(), reflect.TypeOf(u).Elem().String()+reflect.TypeOf(u).Kind().String(),
 	)
 
 }
