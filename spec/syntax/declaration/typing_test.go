@@ -6,8 +6,9 @@ import (
 	"testing"
 )
 
-func TestDeclarationTypeSpec(t *testing.T) {
+func TestSyntaxDeclarationTypeSpec(t *testing.T) {
 	println(`
+		类型声明
 		TypeDecl = "type" ( TypeSpec | "(" { TypeSpec ";" } ")" ) .
 		TypeSpec = AliasDecl | TypeDef .
 
