@@ -7,7 +7,8 @@ import (
 
 func TestSyntaxDeclarationSpec(t *testing.T) {
 	fmt.Println(`
-		总共就五种顶级要素
+		总共就五种顶级要素声明
+		声明: 常量、变量、类型、函数、方法绑定标识符的过程
 		声明常量
 		声明变量
 		声明类型
@@ -17,4 +18,8 @@ func TestSyntaxDeclarationSpec(t *testing.T) {
 		TopLevelDecl  = Declaration | FunctionDecl | MethodDecl .
 	`)
 	TestSyntaxDeclarationTypeSpec(t)
+	TestSyntaxDeclarationConstSpec(t)
+	TestSyntaxDeclarationVarSpec(t)
+	TestSyntaxDeclarationFunctionSpec(t)
+	TestSyntaxDeclarationMethodSpec(t)
 }

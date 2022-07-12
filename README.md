@@ -1,6 +1,6 @@
 # 项目初始化
 ```bash
-mkdir {leetcode,spec,tutorial,misc}
+mkdir {leetcode,spec,tutorial,misc,stdlib,tool,framework,pattern}
 cd leetcode
 go mod init github.com/24king/go-learn/leetcode
 cd ../spec
@@ -15,6 +15,8 @@ cd ../tool
 go mod init github.com/24king/go-learn/tool
 cd ../framework
 go mod init github.com/24king/go-learn/framework
+cd ../pattern
+go mod init github.com/24king/go-learn/pattern
 ```
 # 工作空间初始化
 ```
@@ -25,6 +27,7 @@ go work init ./misc
 go work init ./stdlib
 go work init ./tool
 go work init ./framework
+go work init ./pattern
 ```
 
 # 规范 

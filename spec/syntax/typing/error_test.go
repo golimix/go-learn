@@ -27,7 +27,7 @@ import "testing"
 	   // 错误处理链条
        return nil, fmt.Errorf("parsing %s as HTML: %v", url, err)
     }
-	TODO 错误及其处理
+	TODO 语法-类型系统-错误及其处理
 	方式二、重试
 	方式三、优雅的退出
 	方法四、只记录下错误信息,然后程序继续运行

@@ -20,7 +20,7 @@ func TestTypingStructEmpty(t *testing.T) {
 	fmt.Printf("%p\n", &c)
 }
 
-// TODO 字节填充和内存对齐等相关知识
+// TODO 语法-类型系统-字节填充和内存对齐
 // https://jishuin.proginn.com/p/763bfbd35690
 
 type DemoStruct struct {

@@ -34,7 +34,4 @@ func TestTypingArraySample(t *testing.T) {
 	// 数据下标访问时,不能超出其范围
 	// arr[3] = "limix"
 	fmt.Printf("%s 数组下标访问越界\n", `arr[3]="limix"`)
-
-	// TODO 向数据类型中添加一个元素
-
 }
