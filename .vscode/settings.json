@@ -2,4 +2,9 @@
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "https://www.plantuml.com/plantuml",
     "plantuml.exportFormat": "svg",
+    "go.buildFlags": [
+    ],
+    "go.toolsEnvVars": {
+    
+    },
 }
