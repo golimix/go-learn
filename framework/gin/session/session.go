@@ -15,7 +15,7 @@ type user struct {
 }
 
 func main() {
-	// LIMIX_INFO 针对需要放在SESSION会话中的消息,需要注册
+	// LIMIX_INFO 注册会话可保存类型
 	gob.Register(user{})
 
 	r := gin.Default()
