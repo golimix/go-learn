@@ -18,16 +18,16 @@ type user struct {
 // 1. 用户认证信息,例如用户标识
 // 2. 用户缓存信息,例如用户配置信息
 func main() {
-	// LIMIX_INFO 注册会话可保存类型
+	// LIMIX_INFO 1. 注册会话可保存类型
 	gob.Register(user{})
 
 	r := gin.Default()
 
-	// LIMIX_INFO 1. 注册中间件
+	// LIMIX_INFO 2. 注册中间件
 	store := cookie.NewStore([]byte("secret"))
 	r.Use(sessions.Sessions("mysession", store))
 
-	// LIMIX_INFO 2. 样例程序-信息->会话
+	// LIMIX_INFO 3. 样例程序-信息->会话
 	r.GET("/hello", func(c *gin.Context) {
 		session := sessions.Default(c)
 
@@ -46,7 +46,7 @@ func main() {
 		c.JSON(200, gin.H{"hello": session.Get("hello")})
 	})
 
-	// LIMIX_INFO 3. 样例程序-会话->信息
+	// LIMIX_INFO 4. 样例程序-会话->信息
 	r.GET("/user", func(c *gin.Context) {
 		session := sessions.Default(c)
 		user := session.Get("user")
