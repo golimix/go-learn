@@ -23,11 +23,11 @@ func main() {
 
 	r := gin.Default()
 
-	// 1. 注册中间件
+	// LIMIX_INFO 1. 注册中间件
 	store := cookie.NewStore([]byte("secret"))
 	r.Use(sessions.Sessions("mysession", store))
 
-	// 2. 样例程序-信息->会话
+	// LIMIX_INFO 2. 样例程序-信息->会话
 	r.GET("/hello", func(c *gin.Context) {
 		session := sessions.Default(c)
 
@@ -46,7 +46,7 @@ func main() {
 		c.JSON(200, gin.H{"hello": session.Get("hello")})
 	})
 
-	// 3. 样例程序-会话->信息
+	// LIMIX_INFO 3. 样例程序-会话->信息
 	r.GET("/user", func(c *gin.Context) {
 		session := sessions.Default(c)
 		user := session.Get("user")
