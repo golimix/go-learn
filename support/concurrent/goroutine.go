@@ -22,7 +22,6 @@ func fib(x int) int {
 func spinner(delay time.Duration) {
 	for {
 		for _, r := range `-\|/` {
-			fmt.Printf("%c", '\b')
 			fmt.Printf("%c", r)
 			time.Sleep(delay)
 		}

@@ -59,9 +59,9 @@ func (e Event) Start() {
 func main() {
 	// 无依赖注入框架情况-通过线性关系完成依赖关系的逐步构建
 	// 推导
-	// 全局变量
+	// 1. 全局变量
 	// 缺点: 会导致你的变量过于暴露
-	// 初始化方法
+	// 2. 初始化方法
 	// 缺点: 不方便共享
 	message := NewMessage()
 	greeter := NewGreeter(message)
