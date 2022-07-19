@@ -14,6 +14,9 @@ type user struct {
 	Age  int
 }
 
+// LIMIX_INFO 会话的意义-可用于保存多次请求之间的状态信息
+// 1. 用户认证信息,例如用户标识
+// 2. 用户缓存信息,例如用户配置信息
 func main() {
 	// LIMIX_INFO 注册会话可保存类型
 	gob.Register(user{})
