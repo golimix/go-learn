@@ -7,6 +7,7 @@ import (
 	"github.com/24king/go-learn/framework/gin/casbin/component"
 	"github.com/24king/go-learn/framework/gin/casbin/handler"
 	gormadapter "github.com/casbin/gorm-adapter"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
