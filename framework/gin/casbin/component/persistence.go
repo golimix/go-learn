@@ -14,6 +14,11 @@ var (
 	GlobalCache *bigcache.BigCache
 )
 
+type RestResponse struct {
+	Code    int
+	Message string
+}
+
 func init() {
 	// Connect to DB
 	var err error
