@@ -17,6 +17,7 @@ var (
 type RestResponse struct {
 	Code    int
 	Message string
+	Data    string
 }
 
 func init() {

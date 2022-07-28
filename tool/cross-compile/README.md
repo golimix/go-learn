@@ -7,6 +7,7 @@ CGO_ENABLED 交叉编译不支持CGO,所以需要禁用它
 ```bash
 # 交叉编译-在Mac下编译Linux和Windows64位可执行程序
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build .
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
 ```
 

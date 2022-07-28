@@ -6,6 +6,7 @@ import (
 
 	"github.com/24king/go-learn/framework/gin/casbin/component"
 	"github.com/24king/go-learn/framework/gin/casbin/handler"
+	middleware "github.com/24king/go-learn/framework/gin/casbin/middleware"
 	gormadapter "github.com/casbin/gorm-adapter"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -17,10 +18,7 @@ var (
 
 func init() {
 	// Initialize  casbin adapter
-	adapter, err := gormadapter.NewAdapterByDB(component.DB)
-	if err != nil {
-		panic(fmt.Sprintf("failed to initialize casbin adapter: %v", err))
-	}
+	adapter := gormadapter.NewAdapterByDB(component.DB)
 
 	// Initialize Gin router
 	router = gin.Default()
