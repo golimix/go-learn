@@ -1,4 +1,4 @@
-module github.com/24king/go-learn/framework/gin
+module github.com/golimix/go-learn/framework/gin
 
 go 1.18
 

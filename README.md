@@ -2,21 +2,21 @@
 ```bash
 mkdir {leetcode,spec,tutorial,misc,stdlib,tool,framework,pattern}
 cd leetcode
-go mod init github.com/24king/go-learn/leetcode
+go mod init github.com/golimix/go-learn/leetcode
 cd ../spec
-go mod init github.com/24king/go-learn/spec
+go mod init github.com/golimix/go-learn/spec
 cd ../tutorial
-go mod init github.com/24king/go-learn/tutorial
+go mod init github.com/golimix/go-learn/tutorial
 cd ../misc
-go mod init github.com/24king/go-learn/misc
+go mod init github.com/golimix/go-learn/misc
 cd ../stdlib
-go mod init github.com/24king/go-learn/stdlib
+go mod init github.com/golimix/go-learn/stdlib
 cd ../tool
-go mod init github.com/24king/go-learn/tool
+go mod init github.com/golimix/go-learn/tool
 cd ../framework
-go mod init github.com/24king/go-learn/framework
+go mod init github.com/golimix/go-learn/framework
 cd ../pattern
-go mod init github.com/24king/go-learn/pattern
+go mod init github.com/golimix/go-learn/pattern
 ```
 # 工作空间初始化
 ```

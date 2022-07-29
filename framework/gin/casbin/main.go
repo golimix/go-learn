@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/24king/go-learn/framework/gin/casbin/component"
-	"github.com/24king/go-learn/framework/gin/casbin/handler"
-	middleware "github.com/24king/go-learn/framework/gin/casbin/middleware"
+	"github.com/golimix/go-learn/framework/gin/casbin/component"
+	"github.com/golimix/go-learn/framework/gin/casbin/handler"
+	middleware "github.com/golimix/go-learn/framework/gin/casbin/middleware"
 	gormadapter "github.com/casbin/gorm-adapter"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"

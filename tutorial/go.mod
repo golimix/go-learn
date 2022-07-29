@@ -1,4 +1,4 @@
-module github.com/24king/go-learn/tutorial
+module github.com/golimix/go-learn/tutorial
 
 go 1.18
 

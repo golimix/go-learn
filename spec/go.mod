@@ -1,3 +1,3 @@
-module github.com/24king/go-learn/spec
+module github.com/golimix/go-learn/spec
 
 go 1.18

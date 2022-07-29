@@ -1,3 +1,3 @@
-module github.com/24king/go-learn/tool
+module github.com/golimix/go-learn/tool
 
 go 1.18

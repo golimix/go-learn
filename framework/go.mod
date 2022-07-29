@@ -1,9 +1,9 @@
-module github.com/24king/go-learn/framework
+module github.com/golimix/go-learn/framework
 
 go 1.18
 
 require (
-	github.com/24king/go-learn/framework/gin v0.0.0-20220720025929-1c5421ef2042
+	github.com/golimix/go-learn/framework/gin v0.0.0-20220720025929-1c5421ef2042
 	github.com/allegro/bigcache v1.2.1
 	github.com/casbin/casbin v1.9.1
 	github.com/casbin/gorm-adapter v1.0.0

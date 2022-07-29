@@ -1,3 +1,3 @@
-module github.com/24king/go-learn/pattern
+module github.com/golimix/go-learn/pattern
 
 go 1.18

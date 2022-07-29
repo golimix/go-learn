@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/24king/go-learn/framework/gin/casbin/component"
+	"github.com/golimix/go-learn/framework/gin/casbin/component"
 	"github.com/gin-gonic/gin"
 )
 

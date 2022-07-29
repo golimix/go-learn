@@ -1,4 +1,4 @@
-module github.com/24king/go-learn/framework/gin/casbin
+module github.com/golimix/go-learn/framework/gin/casbin
 
 go 1.18
 
